@@ -63,7 +63,7 @@ function App() {
     const displayedNext = showAll ? filtered : filtered.slice(0, maxVisible);
     
     return (
-        <div className='h-screen w-full bg-gray-100 gap-8 p-5 px-7 font-[Poppins] flex flex-col lg:flex-row'>
+        <div className='h-screen w-full bg-gray-200 gap-8 p-5 px-7 font-[Poppins] flex flex-col lg:flex-row'>
             
             {/* Sidebar */}
             <div className="w-full lg:w-2/12 flex flex-col gap-3">
