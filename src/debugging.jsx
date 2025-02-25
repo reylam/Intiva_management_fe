@@ -82,22 +82,19 @@ function App() {
                 </div>
 
                 {/* profile preview */}
-                <div className='shadow-lg rounded-2xl bg-white h-2/6 flex flex-row lg:flex-col items-center lg:items-center justify-start lg:justify-center p-4'>
-                    <div className='flex flex-col lg:flex-col items-center'>
-                        <div className="flex lg:flex-col items-start lg:items-center ml-3 lg:ml-0 gap-2">
-                            <div className="">
-                                <img src={dudul} alt="" className='w-12 h-12 lg:w-16 lg:h-16 rounded-full' />
-                            </div>
-                            <div className="flex flex-col lg:items-center">
-                                <h2 className='text-sm font-semibold mt-2'>Muhammad Sumbul</h2>
-                                <p className='text-xs text-gray-500'>Programmer</p>
-                            </div>
-                        </div>
-                        <div className='flex'>
-                            <button className='ml-auto lg:ml-0 m-1 text-red-500 border border-red-500 px-4 py-1 rounded-full text-sm cursor-pointer hover:bg-red-500 hover:text-white transition duration-200'>Log Out</button>
+                <div className='shadow-lg rounded-2xl bg-white h-auto lg:h-2/6 flex flex-col lg:flex-col items-center justify-center p-4'>
+                    <div className="flex flex-row gap-2 lg:flex-col lg:items-center">
+                        <img src={dudul} alt="" className='w-12 h-12 lg:w-16 lg:h-16 rounded-full' />
+                        <div className="text-start lg:text-center">
+                        <h2 className='text-sm font-semibold mt-2'>Muhammad Sumbul</h2>
+                        <p className='text-xs text-gray-500'>Programmer</p>
                         </div>
                     </div>
-                </div>
+                    <button className='w-full lg:w-auto mt-4 text-red-500 border border-red-500 px-4 py-2 rounded-full text-sm cursor-pointer hover:bg-red-500 hover:text-white transition duration-200'>
+                        Log Out
+                    </button>
+                    </div>
+
 
             </div>
             
@@ -135,10 +132,6 @@ function App() {
                                 d="M50 92.3423C73.385 92.3423 92.3423 73.385 92.3423 50C92.3423 26.615 73.385 7.65766 50 7.65766C26.615 7.65766 7.65766 26.615 7.65766 50C7.65766 73.385 26.615 92.3423 50 92.3423ZM50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM45.4955 27.928C45.4955 25.4402 47.5122 23.4235 50 23.4235C52.4878 23.4235 54.5045 25.4402 54.5045 27.928V45.4955H71.6216C74.1094 45.4955 76.1261 47.5122 76.1261 50C76.1261 52.4878 74.1094 54.5045 71.6216 54.5045H54.5045V71.6217C54.5045 74.1094 52.4878 76.1262 50 76.1262C47.5122 76.1262 45.4955 74.1094 45.4955 71.6217V54.5045H27.9279C25.4402 54.5045 23.4234 52.4878 23.4234 50C23.4234 47.5122 25.4402 45.4955 27.9279 45.4955H45.4955V27.928Z" 
                                 fill="currentColor"/>
                             </svg>
-
-
-
-
                         </div>
                     </div>
                     

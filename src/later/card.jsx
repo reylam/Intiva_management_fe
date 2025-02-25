@@ -1,5 +1,5 @@
 import { useState } from "react";
-import productsData from "../public/data";
+import productsData from "../../public/data";
 // import Navbar from "./navblox"
 
 export default function App() {
