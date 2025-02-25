@@ -83,15 +83,19 @@ function App() {
 
                 {/* profile preview */}
                 <div className='shadow-lg rounded-2xl bg-white h-2/6 flex flex-row lg:flex-col items-center lg:items-center justify-start lg:justify-center p-4'>
-                    <img src={dudul} alt="" className='w-12 h-12 lg:w-16 lg:h-16 rounded-full' />
                     <div className='flex flex-col lg:flex-col items-center'>
-                    <div className="flex flex-col lg:flex-col items-start lg:items-center ml-3 lg:ml-0">
-                        <h2 className='text-sm font-semibold mt-2'>Muhammad Sumbul</h2>
-                        <p className='text-xs text-gray-500'>Programmer</p>
-                    </div>
-                    <div className=''>
-                    <button className='ml-auto lg:ml-0 m-1 text-red-500 border border-red-500 px-4 py-1 rounded-full text-sm cursor-pointer hover:bg-red-500 hover:text-white transition duration-200'>Log Out</button>
-                    </div>
+                        <div className="flex lg:flex-col items-start lg:items-center ml-3 lg:ml-0 gap-2">
+                            <div className="">
+                                <img src={dudul} alt="" className='w-12 h-12 lg:w-16 lg:h-16 rounded-full' />
+                            </div>
+                            <div className="flex flex-col lg:items-center">
+                                <h2 className='text-sm font-semibold mt-2'>Muhammad Sumbul</h2>
+                                <p className='text-xs text-gray-500'>Programmer</p>
+                            </div>
+                        </div>
+                        <div className='flex'>
+                            <button className='ml-auto lg:ml-0 m-1 text-red-500 border border-red-500 px-4 py-1 rounded-full text-sm cursor-pointer hover:bg-red-500 hover:text-white transition duration-200'>Log Out</button>
+                        </div>
                     </div>
                 </div>
 
