@@ -77,6 +77,8 @@ export default function DashboardAdmin() {
             <li className="flex gap-3">Dashboard</li>
             <li className="flex gap-3 mt-3">Announcement</li>
           </ul>
+
+          <button>Tes</button>
         </div>
 
         {/* profile preview */}
@@ -117,11 +119,11 @@ export default function DashboardAdmin() {
               <div className="absolute top-0 left-0 w-full h-4 bg-red-600 rounded-t-2xl"></div>
               <div className="flex flex-col">
                 <h2 className="font-semibold text-lg border-b border-gray-500 py-2">
-                  Todays Announcement
+                  Today's Announcement
                 </h2>
-                <h3 className="mt-2 font-semibold">Meeting Programmer</h3>
-                <p className="text-sm text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <h3 className="mt-2 font-semibold lg:text-2xl">Meeting Programmer</h3>
+                <p className="text-sm text-gray-600 lg:text-lg">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit 
                 </p>
                 <div className="flex gap-2 mt-2">
                   <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
@@ -140,7 +142,7 @@ export default function DashboardAdmin() {
                     className="w-12 h-12 lg:w-16 lg:h-16 rounded-full"
                   />
                 </div>
-                <div className="">
+                <div className="pl-2">
                   <h2 className="text-sm font-semibold">Muhammad Sumbul</h2>
                   <p className="text-xs text-gray-500">Programmer</p>
                 </div>
@@ -150,8 +152,8 @@ export default function DashboardAdmin() {
             {/* new member */}
             <div className="h-1/4 bg-cyan-600 rounded-2xl items-center shadow-lg flex justify-between p-4">
               <div className="p-2 text-white">
-                <h1 className="text-2xl font-medium">New Member</h1>
-                <p className="text-md font-light">
+                <h1 className="text-lg lg:text-2xl font-medium">New Member</h1>
+                <p className="text-xs lg:text-md font-light">
                   Adding new member to your division
                 </p>
               </div>
@@ -161,7 +163,7 @@ export default function DashboardAdmin() {
                 viewBox="0 0 100 100"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="pr-10 text-white hover:text-gray-200 transition duration-100"
+                className="pr-10 text-white hover:text-gray-300 transition duration-100 cursor-pointer"
               >
                 <path
                   fillRule="evenodd"
