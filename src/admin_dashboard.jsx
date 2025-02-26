@@ -114,9 +114,9 @@ function App() {
         <div className="flex flex-col lg:flex-row gap-8 h-5/6">
           {/* Today's Announcement */}
           <div className="w-full lg:w-2/4 flex flex-col gap-3">
-            <div className="relative h-3/4 bg-white rounded-2xl shadow-lg p-4 ">
+            <div className="relative h-3/4 bg-white rounded-2xl shadow-lg p-4 flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-4 bg-red-600 rounded-t-2xl"></div>
-              <div>
+              <div className="flex flex-col">
                 <h2 className="font-semibold text-lg border-b border-gray-500 py-2">
                   Todays Announcement
                 </h2>
@@ -124,7 +124,6 @@ function App() {
                 <p className="text-sm text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-              </div>
               <div className="flex gap-2 mt-2">
                 <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
                   Sport
@@ -132,6 +131,7 @@ function App() {
                 <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
                   JS
                 </span>
+              </div>
               </div>
               <div className="flex items-center">
                 <div className="">
@@ -142,7 +142,7 @@ function App() {
                   />
                 </div>
                 <div className="">
-                  <h2 className="text-sm font-semibold mt-2">
+                  <h2 className="text-sm font-semibold">
                     Muhammad Sumbul
                   </h2>
                   <p className="text-xs text-gray-500">Programmer</p>
