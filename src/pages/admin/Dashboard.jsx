@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./App.css";
-import Intiva from "./assets/intivaLogo.png";
-import dudul from "./assets/dudul.jpg";
+import Intiva from "../../assets/intivaLogo.png";
+import dudul from "../../assets/dudul.jpg";
 
 const ancDumms = [
   {
@@ -48,7 +47,7 @@ const ancDumms = [
   },
 ];
 
-function App() {
+export default function DashboardAdmin() {
   const [search, setSearch] = useState("");
   const [showAll] = useState(false);
 
@@ -124,14 +123,14 @@ function App() {
                 <p className="text-sm text-gray-600">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-              <div className="flex gap-2 mt-2">
-                <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
-                  Sport
-                </span>
-                <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
-                  JS
-                </span>
-              </div>
+                <div className="flex gap-2 mt-2">
+                  <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
+                    Sport
+                  </span>
+                  <span className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full">
+                    JS
+                  </span>
+                </div>
               </div>
               <div className="flex items-center">
                 <div className="">
@@ -142,9 +141,7 @@ function App() {
                   />
                 </div>
                 <div className="">
-                  <h2 className="text-sm font-semibold">
-                    Muhammad Sumbul
-                  </h2>
+                  <h2 className="text-sm font-semibold">Muhammad Sumbul</h2>
                   <p className="text-xs text-gray-500">Programmer</p>
                 </div>
               </div>
@@ -236,5 +233,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
