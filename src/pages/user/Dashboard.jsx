@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Intiva from "../../assets/intivaLogo.png";
 import dudul from "../../assets/dudul.jpg";
 
@@ -109,18 +114,59 @@ export default function DashboardUser() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
-
+        
+        {/* konten */}
         <div className="flex flex-col lg:flex-row gap-8 h-5/6">
           {/* Today's Announcement */}
           <div className="w-full lg:w-2/4 flex flex-col gap-3">
-            <div className="relative h-3/4 bg-white rounded-2xl shadow-lg p-4 flex flex-col justify-between">
-              <div className="absolute top-0 left-0 w-full h-4 bg-red-600 rounded-t-2xl"></div>
-              <div className="flex flex-col">
-                <h2 className="font-semibold text-lg border-b border-gray-500 py-2">
-                  Todays Announcement
-                </h2>
-                <h3 className="mt-2 font-semibold">Meeting Programmer</h3>
-                <p className="text-sm text-gray-600">
+          <div className="relative h-3/4 bg-white rounded-2xl shadow-lg p-4">
+      <div className="absolute top-0 left-0 w-full h-4 bg-red-600 rounded-t-2xl"></div>
+      <h2 className="font-semibold text-lg border-b border-gray-500 py-2">
+        Today's Announcement
+      </h2>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={10}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        className="mt-4"
+      >
+        {ancDumms.map((anc, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-col gap-2">
+              <h3 className="mt-2 font-semibold">{anc.title}</h3>
+              <p className="text-sm text-gray-600">{anc.description}</p>
+              <div className="flex gap-2 mt-2">
+                {anc.tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-orange-200 text-orange-700 px-3 py-1 text-xs rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="flex items-center mt-2">
+                <img src={anc.image} alt="" className="w-12 h-12 rounded-full" />
+                <div className="pl-2">
+                  <h2 className="text-sm font-semibold">{anc.author}</h2>
+                  <p className="text-xs text-gray-500">{anc.role}</p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+
+            {/* new member */}
+            <div className="h-1/2  lg:h-1/4 bg-cyan-600 rounded-2xl shadow-lg flex flex-col py-2 px-4 ">
+              <div className="">
+                <h1 className=" font-semibold border-b border-gray-200 py-1 text-white text-lg">Division Announcement</h1>
+              </div>
+              <h3 className="mt-2 font-semibold text-white">Meeting Programmer</h3>
+                <p className="text-sm text-white">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
                 <div className="flex gap-2 mt-2">
@@ -131,26 +177,8 @@ export default function DashboardUser() {
                     JS
                   </span>
                 </div>
-              </div>
-              <div className="flex items-center">
-                <div className="">
-                  <img
-                    src={dudul}
-                    alt=""
-                    className="w-12 h-12 lg:w-16 lg:h-16 rounded-full"
-                  />
-                </div>
-                <div className="">
-                  <h2 className="text-sm font-semibold">Muhammad Sumbul</h2>
-                  <p className="text-xs text-gray-500">Programmer</p>
-                </div>
-              </div>
             </div>
-
-            {/* new member */}
-            <div className="h-1/4 bg-slate-200 rounded-2xl items-center shadow-lg flex justify-between p-4">
-                <h1>Your Division An</h1>
-            </div>
+            
           </div>
 
           {/* Up Next */}

@@ -7,10 +7,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<DashboardUser></DashboardUser>}></Route>
-        <Route
-          path="/admin"
-          element={<DashboardAdmin></DashboardAdmin>}
-        ></Route>
+        <Route path="/admin" element={<DashboardAdmin></DashboardAdmin>}></Route>
       </Routes>
     </>
   );
